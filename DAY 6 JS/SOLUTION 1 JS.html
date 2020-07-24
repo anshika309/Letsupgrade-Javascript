@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>ASSIGNMENT 6 DAY 6</title>
+     <h1>QUESTION 1</h1>
+    </head>
+<body>
+    <button id="sample" onclick="start()">start</button>
+  <script>
+      //document.write("open console box for output");
+      var colours=['Red','Green','Yellow','Blue'];
+      function change() {
+          setTimeout(function loop() {
+              document.bgColor=colours.shift();
+              if(colours.length)
+              {
+                setTimeout(loop,5000);
+              }
+          },5000);
+      }
+          function start()
+          {
+             setInterval(change(),5000); 
+          }
+        </script>
+        
+        </body>
+        </html>
+           

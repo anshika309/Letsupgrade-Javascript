@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>ASSIGNMENT 6 DAY 6</title>
+     <h1>QUESTION 3</h1>
+    </head>
+<body>
+ 
+ <button type="button" onClick="start()">start</button>
+ 
+  <script>
+      
+      
+      document.write("<br/>");
+      let name=prompt("enter the name of user");
+      document.write("welcome ",name);
+      function start() {
+          var current=new Date();
+          var hour=current.getHours();
+          var min=current.getMinutes();
+          var sec=current.getSeconds();
+          min=checkTime(min);
+          sec=checkTime(sec);
+          document.getElementById('txt').innerHTML=hour + ":"+min+":"+sec;
+          var time=setTimeout(start,600);
+      }
+      function checkTime(i)
+      {
+          if(i<10)
+          {
+              i="0"+i;
+          }
+          return i;
+      }
+     
+   </script>
+     <div id="txt"></div>
+      </body>
+      </html>
+      
